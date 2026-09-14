@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanchita Malakar | Full-Stack & AI/ML Software Engineer</title>
+  <meta name="description" content="Portfolio of Sanchita Malakar - Full-Stack & AI/ML Software Engineer, B.Tech CSE. Hands-on experience architecting production web platforms, distributed queuing, and explainable AI models.">
+  <meta name="keywords" content="Sanchita Malakar, Software Engineer, Full Stack Developer, AI/ML, Python, TypeScript, Next.js, PostgreSQL, Streamlit, Supabase, React">
+  <meta name="author" content="Sanchita Malakar">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Sanchita Malakar | Software Engineer & AI/ML Portfolio">
+  <meta property="og:description" content="Explore production projects, full-stack systems, ERP architectures, and AI/ML pipelines built by Sanchita Malakar.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Three.js (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 3D Canvas Background -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Ambient Glow Elements -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-symbol">&lt;SM /&gt;</span>
+        <span class="logo-text">Sanchita<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-recruiter-quick" id="open-recruiter-modal-btn" title="Open Recruiter 60-Second Fast-Track View">
+          <span class="pulse-dot"></span>
+          <i class="fa-solid fa-bolt"></i>
+          <span>Recruiter Mode</span>
+        </button>
+        <button class="btn-primary btn-sm" id="btn-resume-download" title="Download or Print Resume">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Resume</span>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-header">
+        <span class="brand-logo">&lt;SM /&gt;</span>
+        <button class="btn-icon" id="mobile-menu-close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="mobile-links">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </div>
+      <div class="mobile-actions">
+        <button class="btn-recruiter-quick w-100 mb-2" id="mobile-recruiter-btn">
+          <i class="fa-solid fa-bolt"></i> Recruiter Mode (60s Summary)
+        </button>
+        <button class="btn-primary w-100" id="mobile-resume-btn">
+          <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Content (Left) -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-indicator">
+              <span class="pulse-ring"></span>
+              <span class="pulse-core"></span>
+            </span>
+            <span class="badge-text">Seeking SDE & AI/ML Roles • Immediate Availability</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text gradient-glow">Sanchita Malakar</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            Full-Stack Software Engineer & <span class="highlight-cyan">AI/ML Developer</span>
+          </h2>
+
+          <p class="hero-description">
+            Computer Science Engineering student at <strong>MAKAUT</strong> (Expected 2027). Hands-on engineer with real-world experience building and shipping <strong>production-scale ERPs</strong>, resilient <strong>microservice & queuing pipelines</strong>, and <strong>explainable AI workflows</strong> serving 500+ active users.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <button class="btn-primary btn-lg" id="hero-recruiter-btn">
+              <i class="fa-solid fa-bolt"></i>
+              <span>Recruiter Fast-Track (60s)</span>
+            </button>
+            <a href="#projects" class="btn-secondary btn-lg">
+              <i class="fa-solid fa-code-fork"></i>
+              <span>Explore Projects</span>
+            </a>
+            <button class="btn-glass btn-lg" id="hero-resume-btn">
+              <i class="fa-solid fa-file-lines"></i>
+              <span>View Resume</span>
+            </button>
+          </div>
+
+          <!-- Quick HR Copy Snippets -->
+          <div class="quick-contact-pills">
+            <button class="contact-pill copy-trigger" data-copy="sanchitamalakar873@gmail.com" title="Click to copy email">
+              <i class="fa-regular fa-envelope"></i>
+              <span>sanchitamalakar873@gmail.com</span>
+              <i class="fa-solid fa-copy copy-icon"></i>
+            </button>
+            <button class="contact-pill copy-trigger" data-copy="+918918592391" title="Click to copy phone">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 8918592391</span>
+              <i class="fa-solid fa-copy copy-icon"></i>
+            </button>
+            <a href="https://linkedin.com/in/sanchita-malakar938a55321" target="_blank" rel="noopener" class="contact-pill link-pill">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+              <i class="fa-solid fa-arrow-up-right-from-square copy-icon"></i>
+            </a>
+            <a href="https://github.com/Sanchita-Malakar" target="_blank" rel="noopener" class="contact-pill link-pill">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+              <i class="fa-solid fa-arrow-up-right-from-square copy-icon"></i>
+            </a>
+            <div class="contact-pill location-pill">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>West Bengal, India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero 3D Card with Portrait (Right) -->
+        <div class="hero-visual">
+          <div class="tilt-card-wrapper">
+            <div class="profile-card-3d" id="profile-card-3d">
+              <div class="card-glass-glow"></div>
+              
+              <!-- Floating Tech Badges (3D Parallax) -->
+              <div class="float-tag tag-top-left" data-speed="1.5">
+                <i class="fa-brands fa-react text-cyan"></i>
+                <span>Next.js 16 & React 19</span>
+              </div>
+              <div class="float-tag tag-top-right" data-speed="2.0">
+                <i class="fa-brands fa-python text-yellow"></i>
+                <span>Python & XGBoost</span>
+              </div>
+              <div class="float-tag tag-bottom-left" data-speed="1.2">
+                <i class="fa-solid fa-database text-purple"></i>
+                <span>PostgreSQL & Redis</span>
+              </div>
+              <div class="float-tag tag-bottom-right" data-speed="1.8">
+                <i class="fa-solid fa-brain text-emerald"></i>
+                <span>Explainable AI & RAG</span>
+              </div>
+
+              <!-- Main Portrait Container -->
+              <div class="portrait-frame">
+                <div class="portrait-border-glow"></div>
+                <img src="assets/sanchita_portrait.jpg" alt="Sanchita Malakar - Full-Stack & AI Software Engineer" class="portrait-img" id="hero-portrait">
+                <div class="portrait-overlay">
+                  <div class="portrait-status">
+                    <span class="live-dot"></span>
+                    <span>Ready to Join & Contribute</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mini Stat Bottom Bar -->
+              <div class="profile-card-footer">
+                <div class="footer-stat">
+                  <span class="stat-num">500+</span>
+                  <span class="stat-label">Students in ERP</span>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-stat">
+                  <span class="stat-num">28+</span>
+                  <span class="stat-label">REST Endpoints</span>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-stat">
+                  <span class="stat-num">7.6</span>
+                  <span class="stat-label">B.Tech CGPA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Production Metrics Ribbon -->
+      <div class="container">
+        <div class="metrics-ribbon">
+          <div class="metric-card">
+            <div class="metric-icon"><i class="fa-solid fa-users-gear text-cyan"></i></div>
+            <div class="metric-info">
+              <span class="metric-value">500+ Students</span>
+              <span class="metric-desc">35+ Staff in Live Production ERP</span>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon"><i class="fa-solid fa-network-wired text-purple"></i></div>
+            <div class="metric-info">
+              <span class="metric-value">28 REST APIs</span>
+              <span class="metric-desc">17 PostgreSQL Tables & RLS</span>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon"><i class="fa-solid fa-bell text-emerald"></i></div>
+            <div class="metric-info">
+              <span class="metric-value">15,000+ / Mo</span>
+              <span class="metric-desc">Async WhatsApp & Redis Queue</span>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon"><i class="fa-solid fa-bolt-lightning text-yellow"></i></div>
+            <div class="metric-info">
+              <span class="metric-value">&lt; 30 Seconds</span>
+              <span class="metric-desc">500+ Batch PDF Report Cards</span>
+            </div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-icon"><i class="fa-solid fa-briefcase text-cyan"></i></div>
+            <div class="metric-info">
+              <span class="metric-value">4 Roles & Internships</span>
+              <span class="metric-desc">IBM Cloud, IBM Edunet, BSSVM, TCS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-user-astronaut"></i> Engineering Profile</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">Bridging rigorous computer science fundamentals with dependable, production-ready software solutions.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-bio card-glass">
+            <h3 class="bio-heading">Who I Am & What I Bring to Your Team</h3>
+            <p>
+              I am a pre-final year <strong>B.Tech Computer Science & Engineering</strong> student at Murshidabad College of Engineering & Technology (MAKAUT). Unlike typical students who focus solely on academic toy projects, I specialize in <strong>shipping battle-tested systems</strong> that solve high-stakes operational and administrative bottlenecks.
+            </p>
+            <p>
+              My hands-on journey includes architecting end-to-end full-stack platforms with <strong>Next.js, TypeScript, PostgreSQL, and Supabase</strong>, integrating <strong>biometric IoT/TCP-IP hardware</strong>, orchestrating <strong>Redis + BullMQ</strong> message queues, and developing predictive machine learning pipelines using <strong>Scikit-learn, XGBoost, and SHAP Explainable AI</strong>.
+            </p>
+            
+            <div class="about-strengths-chips">
+              <span class="chip"><i class="fa-solid fa-check text-emerald"></i> Production Deployment</span>
+              <span class="chip"><i class="fa-solid fa-check text-emerald"></i> Database Schema & ACID</span>
+              <span class="chip"><i class="fa-solid fa-check text-emerald"></i> Explainable AI (XAI)</span>
+              <span class="chip"><i class="fa-solid fa-check text-emerald"></i> Asynchronous Queuing</span>
+              <span class="chip"><i class="fa-solid fa-check text-emerald"></i> Trilingual Communication</span>
+            </div>
+          </div>
+
+          <div class="about-highlights-grid">
+            <div class="highlight-box card-glass">
+              <div class="highlight-icon"><i class="fa-solid fa-shield-halved text-purple"></i></div>
+              <h4>Enterprise Security & RLS</h4>
+              <p>Implemented PostgreSQL Row-Level Security, 2FA, OTP verification, rate limiting, and administrative audit triggers to protect confidential student & parent data.</p>
+            </div>
+            <div class="highlight-box card-glass">
+              <div class="highlight-icon"><i class="fa-solid fa-chart-line text-cyan"></i></div>
+              <h4>Predictive & Explainable AI</h4>
+              <p>Built multi-tier HR workforce classifiers (EmpIQ) using XGBoost and SHAP TreeExplainer, transforming black-box ML predictions into explainable HR decision workflows.</p>
+            </div>
+            <div class="highlight-box card-glass">
+              <div class="highlight-icon"><i class="fa-solid fa-server text-emerald"></i></div>
+              <h4>Distributed & Async Systems</h4>
+              <p>Engineered background pipelines using Redis and BullMQ to process 15,000+ monthly Meta WhatsApp notifications with automatic retries and TCP-IP hardware sync.</p>
+            </div>
+            <div class="highlight-box card-glass">
+              <div class="highlight-icon"><i class="fa-solid fa-comments text-yellow"></i></div>
+              <h4>Clear Communication & Grit</h4>
+              <p>Fluent in <strong>English, Hindi, and Bengali</strong>. Exceptional collaborative skills honed through client-facing institutional projects and cross-functional internships.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Technical Competencies</span>
+          <h2 class="section-title">Skills & <span class="gradient-text">Tech Stack</span></h2>
+          <p class="section-subtitle">Categorized for fast ATS parsing and recruiter evaluation.</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="skills-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="backend">Backend & Architecture</button>
+          <button class="filter-btn" data-filter="frontend">Frontend & Full-Stack</button>
+          <button class="filter-btn" data-filter="ai">AI / ML & Analytics</button>
+          <button class="filter-btn" data-filter="devops">Cloud & Databases</button>
+          <button class="filter-btn" data-filter="languages">Core Languages</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-container">
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="languages ai">
+            <div class="skill-header">
+              <i class="fa-brands fa-python skill-icon text-yellow"></i>
+              <div class="skill-title-wrap">
+                <h4>Python</h4>
+                <span class="skill-badge badge-adv">Advanced</span>
+              </div>
+            </div>
+            <p class="skill-desc">Object-Oriented Programming, Scikit-learn, PyTorch, Pandas, Streamlit, SHAP, Watsonx integration.</p>
+            <div class="skill-tags">
+              <span>ML Pipelines</span>
+              <span>Data Analysis</span>
+              <span>RAG</span>
+            </div>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="languages frontend backend">
+            <div class="skill-header">
+              <i class="fa-brands fa-js skill-icon text-yellow"></i>
+              <div class="skill-title-wrap">
+                <h4>TypeScript & JS</h4>
+                <span class="skill-badge badge-adv">Advanced</span>
+              </div>
+            </div>
+            <p class="skill-desc">Type-safe full-stack development, modern ESNext, asynchronous patterns, Node.js runtime.</p>
+            <div class="skill-tags">
+              <span>TypeScript</span>
+              <span>JavaScript ES6+</span>
+              <span>Async/Await</span>
+            </div>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="frontend">
+            <div class="skill-header">
+              <i class="fa-brands fa-react skill-icon text-cyan"></i>
+              <div class="skill-title-wrap">
+                <h4>Next.js 16 & React 19</h4>
+                <span class="skill-badge badge-adv">Advanced</span>
+              </div>
+            </div>
+            <p class="skill-desc">Server Components, Server Actions, App Router, responsive state management, SEO, caching.</p>
+            <div class="skill-tags">
+              <span>Next.js 16</span>
+              <span>React 19</span>
+              <span>SSR / SSG</span>
+            </div>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="backend">
+            <div class="skill-header">
+              <i class="fa-brands fa-node-js skill-icon text-emerald"></i>
+              <div class="skill-title-wrap">
+                <h4>Node.js & REST APIs</h4>
+                <span class="skill-badge badge-adv">Advanced</span>
+              </div>
+            </div>
+            <p class="skill-desc">Scalable RESTful microservices, 28+ production endpoints, RBAC authentication, middleware.</p>
+            <div class="skill-tags">
+              <span>Express / Node</span>
+              <span>RESTful APIs</span>
+              <span>JWT & OTP</span>
+            </div>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="devops backend">
+            <div class="skill-header">
+              <i class="fa-solid fa-database skill-icon text-purple"></i>
+              <div class="skill-title-wrap">
+                <h4>PostgreSQL & SQL</h4>
+                <span class="skill-badge badge-adv">Advanced</span>
+              </div>
+            </div>
+            <p class="skill-desc">24-table schema engineering, ACID transactions, Row-Level Security (RLS), triggers, and historical auditing.</p>
+            <div class="skill-tags">
+              <span>PostgreSQL</span>
+              <span>Schema Design</span>
+              <span>RLS Security</span>
+            </div>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="ai">
+            <div class="skill-header">
+              <i class="fa-solid fa-brain skill-icon text-cyan"></i>
+              <div class="skill-title-wrap">
+                <h4>Scikit-learn & XGBoost</h4>
+                <span class="skill-badge badge-adv">Advanced</span>
+              </div>
+            </div>
+            <p class="skill-desc">Multi-class classification, feature engineering, stratified cross-validation, ROC-AUC optimization.</p>
+            <div class="skill-tags">
+              <span>XGBoost</span>
+              <span>Random Forest</span>
+              <span>Feature Pipeline</span>
+            </div>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="ai">
+            <div class="skill-header">
+              <i class="fa-solid fa-magnifying-glass-chart skill-icon text-yellow"></i>
+              <div class="skill-title-wrap">
+                <h4>Explainable AI (SHAP)</h4>
+                <span class="skill-badge badge-spec">Specialized</span>
+              </div>
+            </div>
+            <p class="skill-desc">SHAP TreeExplainer, feature-importance ranking, local & global explainability for human-in-the-loop workflows.</p>
+            <div class="skill-tags">
+              <span>SHAP</span>
+              <span>TreeExplainer</span>
+              <span>Model Interpretability</span>
+            </div>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="ai devops">
+            <div class="skill-header">
+              <i class="fa-solid fa-chart-pie skill-icon text-purple"></i>
+              <div class="skill-title-wrap">
+                <h4>Streamlit & Plotly</h4>
+                <span class="skill-badge badge-adv">Advanced</span>
+              </div>
+            </div>
+            <p class="skill-desc">Built 1,000+ line interactive workforce intelligence dashboards with real-time inference and CSV exports.</p>
+            <div class="skill-tags">
+              <span>Streamlit</span>
+              <span>Plotly Visuals</span>
+              <span>Radar Charts</span>
+            </div>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="devops backend">
+            <div class="skill-header">
+              <i class="fa-solid fa-bolt skill-icon text-yellow"></i>
+              <div class="skill-title-wrap">
+                <h4>Redis & BullMQ</h4>
+                <span class="skill-badge badge-adv">Advanced</span>
+              </div>
+            </div>
+            <p class="skill-desc">Asynchronous background job queuing, rate limiting, retry backoffs for 15,000+ monthly notifications.</p>
+            <div class="skill-tags">
+              <span>BullMQ</span>
+              <span>Redis Cache</span>
+              <span>Worker Queues</span>
+            </div>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="devops">
+            <div class="skill-header">
+              <i class="fa-brands fa-docker skill-icon text-cyan"></i>
+              <div class="skill-title-wrap">
+                <h4>Docker & Supabase</h4>
+                <span class="skill-badge badge-int">Proficient</span>
+              </div>
+            </div>
+            <p class="skill-desc">Containerized deployments, private Supabase Storage, automated database backups, and CI/CD workflows.</p>
+            <div class="skill-tags">
+              <span>Docker</span>
+              <span>Supabase</span>
+              <span>Git & GitHub</span>
+            </div>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="languages">
+            <div class="skill-header">
+              <i class="fa-solid fa-code skill-icon text-purple"></i>
+              <div class="skill-title-wrap">
+                <h4>C++</h4>
+                <span class="skill-badge badge-adv">Core Foundation</span>
+              </div>
+            </div>
+            <p class="skill-desc">Data Structures & Algorithms, Object-Oriented Design, memory management, and competitive problem-solving.</p>
+            <div class="skill-tags">
+              <span>DSA</span>
+              <span>OOP Concepts</span>
+              <span>Algorithm Analysis</span>
+            </div>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="skill-card card-glass" data-category="ai backend">
+            <div class="skill-header">
+              <i class="fa-solid fa-robot skill-icon text-emerald"></i>
+              <div class="skill-title-wrap">
+                <h4>RAG & PyTorch</h4>
+                <span class="skill-badge badge-int">Proficient</span>
+              </div>
+            </div>
+            <p class="skill-desc">Retrieval-Augmented Generation workflows, IBM Watsonx LLMs, neural network training fundamentals.</p>
+            <div class="skill-tags">
+              <span>PyTorch</span>
+              <span>IBM Watsonx</span>
+              <span>RAG Pipelines</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-diagram-project"></i> Proven Track Record</span>
+          <h2 class="section-title">Production & <span class="gradient-text">Featured Projects</span></h2>
+          <p class="section-subtitle">Real systems deployed in production, engineered for scale, reliability, and clear ROI.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PROJECT 1: EmpIQ (STAR PROJECT FOR HR RECRUITERS!) -->
+          <div class="project-card card-glass featured-spotlight" data-tilt>
+            <div class="project-badge-ribbon">
+              <span class="star-badge"><i class="fa-solid fa-star"></i> HR & AI Showcase</span>
+              <span class="status-pill status-live"><i class="fa-solid fa-circle"></i> Complete ML System</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-top">
+                <div class="project-icon-box bg-purple-glow">
+                  <i class="fa-solid fa-people-roof text-purple"></i>
+                </div>
+                <div>
+                  <h3 class="project-title">EmpIQ — AI-Powered HR Analytics & Workforce Intelligence</h3>
+                  <span class="project-role-badge">Machine Learning Engineer & System Architect</span>
+                </div>
+              </div>
+
+              <p class="project-overview">
+                An end-to-end enterprise workforce intelligence system predicting employee performance across High, Medium, and Low tiers. Translates complex predictive modeling into explainable, trustworthy HR actions.
+              </p>
+
+              <!-- HR Value Callout -->
+              <div class="hr-value-card">
+                <div class="hr-value-title"><i class="fa-solid fa-briefcase text-yellow"></i> Direct HR & Business Impact:</div>
+                <ul class="hr-impact-list">
+                  <li><strong>Flight-Risk & Retention:</strong> Identifies potential employee turnover early with stratified cross-validation.</li>
+                  <li><strong>Explainable AI (SHAP):</strong> Employs SHAP TreeExplainer so HR leaders see <em>why</em> each prediction occurred (no black-box blind spots).</li>
+                  <li><strong>Domain Feature Engineering:</strong> Crafted custom metrics like <code>engagement_score</code>, <code>salary_per_exp</code>, <code>career_momentum</code>, and <code>overwork_flag</code>.</li>
+                  <li><strong>Production Streamlit UI:</strong> 1,000+ lines of application code with Plotly radar charts, heatmaps, batch analytics, and CSV exports.</li>
+                </ul>
+              </div>
+
+              <div class="project-tech-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Scikit-learn</span>
+                <span class="tag">XGBoost</span>
+                <span class="tag">SHAP XAI</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Plotly</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn-primary btn-sm open-project-details" data-project="empiq">
+                  <i class="fa-solid fa-circle-info"></i> View Deep-Dive Specs
+                </button>
+                <a href="https://github.com/Sanchita-Malakar/Employee-Performance-Intelligence" target="_blank" rel="noopener" class="btn-glass btn-sm">
+                  <i class="fa-brands fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: BSSVM Digital Admissions Platform -->
+          <div class="project-card card-glass" data-tilt>
+            <div class="project-badge-ribbon">
+              <span class="status-pill status-prod"><i class="fa-solid fa-circle-check"></i> Live in Production</span>
+              <span class="status-pill status-tag">Hostinger</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-top">
+                <div class="project-icon-box bg-cyan-glow">
+                  <i class="fa-solid fa-school text-cyan"></i>
+                </div>
+                <div>
+                  <h3 class="project-title">BSSVM Web Portal & Digital Admissions Platform</h3>
+                  <span class="project-role-badge">Lead Full-Stack Architect</span>
+                </div>
+              </div>
+
+              <p class="project-overview">
+                Production institutional platform deployed for a private school, fully digitizing multi-step student admissions, fee automation, and administrative governance.
+              </p>
+
+              <div class="key-metrics-mini">
+                <div class="mini-stat">
+                  <strong>28</strong>
+                  <span>REST Endpoints</span>
+                </div>
+                <div class="mini-stat">
+                  <strong>17</strong>
+                  <span>PostgreSQL Tables</span>
+                </div>
+                <div class="mini-stat">
+                  <strong>2FA & RLS</strong>
+                  <span>Enterprise Security</span>
+                </div>
+              </div>
+
+              <ul class="project-bullet-list">
+                <li>Architected 28 RESTful endpoints supporting OTP auth, dynamic class-specific fee structures, and document processing.</li>
+                <li>Implemented PostgreSQL Row-Level Security (RLS) separating public portal, parent applications, and confidential administrative records.</li>
+                <li>Built audit & recovery state machine using PostgreSQL triggers to inspect and revert record mutations.</li>
+                <li>Bilingual English–Bengali localization, SEO optimization, and secure Supabase storage.</li>
+              </ul>
+
+              <div class="project-tech-tags">
+                <span class="tag">Next.js 16</span>
+                <span class="tag">React 19</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Supabase</span>
+                <span class="tag">Hostinger</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn-primary btn-sm open-project-details" data-project="bssvm-portal">
+                  <i class="fa-solid fa-circle-info"></i> View Architecture
+                </button>
+                <a href="https://github.com/Sanchita-Malakar" target="_blank" rel="noopener" class="btn-glass btn-sm">
+                  <i class="fa-brands fa-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: BSSVM CampusCore ERP -->
+          <div class="project-card card-glass" data-tilt>
+            <div class="project-badge-ribbon">
+              <span class="status-pill status-prod"><i class="fa-solid fa-circle-check"></i> Live in Production</span>
+              <span class="status-pill status-tag">500+ Daily Users</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-top">
+                <div class="project-icon-box bg-emerald-glow">
+                  <i class="fa-solid fa-building-columns text-emerald"></i>
+                </div>
+                <div>
+                  <h3 class="project-title">BSSVM CampusCore — School Operations & ERP Platform</h3>
+                  <span class="project-role-badge">Backend & Distributed Systems Engineer</span>
+                </div>
+              </div>
+
+              <p class="project-overview">
+                Centralized ERP platform managing 500+ students and 35+ faculty/staff. Powers financial ledgers, biometric attendance synchronization, and high-volume automated notifications.
+              </p>
+
+              <div class="key-metrics-mini">
+                <div class="mini-stat">
+                  <strong>15K+</strong>
+                  <span>Monthly Alerts</span>
+                </div>
+                <div class="mini-stat">
+                  <strong>&lt; 30s</strong>
+                  <span>500+ PDF Reports</span>
+                </div>
+                <div class="mini-stat">
+                  <strong>4 Roles</strong>
+                  <span>Strict RBAC</span>
+                </div>
+              </div>
+
+              <ul class="project-bullet-list">
+                <li>Engineered a 24-table PostgreSQL schema with strict ACID compliance across financial ledgers, payroll, and grades.</li>
+                <li>Built asynchronous queuing engine with Redis & BullMQ hooked into Meta WhatsApp Business API for 15,000+ monthly alerts.</li>
+                <li>Synchronized biometric attendance hardware via TCP-IP SDK, automating late-arrival and payroll deductions.</li>
+                <li>High-performance bulk PDF report card generation rendering 500+ personalized student reports in under 30 seconds.</li>
+              </ul>
+
+              <div class="project-tech-tags">
+                <span class="tag">TypeScript</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Redis</span>
+                <span class="tag">BullMQ</span>
+                <span class="tag">WhatsApp API</span>
+                <span class="tag">Docker</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn-primary btn-sm open-project-details" data-project="campuscore">
+                  <i class="fa-solid fa-circle-info"></i> View Architecture
+                </button>
+                <a href="https://github.com/Sanchita-Malakar" target="_blank" rel="noopener" class="btn-glass btn-sm">
+                  <i class="fa-brands fa-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Career Journey</span>
+          <h2 class="section-title">Work & <span class="gradient-text">Internship Experience</span></h2>
+          <p class="section-subtitle">Demonstrated ownership and collaborative excellence across industry settings.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Item 1: IBM Cloud AICTE -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card-glass">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">AI & Cloud Development Intern</h3>
+                  <div class="company-name text-purple"><i class="fa-solid fa-building"></i> IBM Cloud (AICTE)</div>
+                </div>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Internship</span>
+              </div>
+              <p class="timeline-desc">
+                Engineered AI/ML and Retrieval-Augmented Generation (RAG) applications leveraging Python, enterprise AI models, and IBM Watsonx ecosystem. Explored enterprise vector embeddings and prompt engineering architectures.
+              </p>
+              <div class="experience-skills">
+                <span>Python</span>
+                <span>IBM Watsonx</span>
+                <span>RAG</span>
+                <span>Cloud AI Services</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Frontend Development Intern - IBM / Edunet -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card-glass">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Frontend Development Intern</h3>
+                  <div class="company-name text-cyan"><i class="fa-solid fa-building"></i> IBM / Edunet Foundation</div>
+                </div>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Internship</span>
+              </div>
+              <p class="timeline-desc">
+                Developed and deployed responsive web applications and AI-enabled frontends utilizing modern HTML, CSS, JavaScript, and external APIs. Focused on component modularity and UI performance.
+              </p>
+              <div class="experience-skills">
+                <span>JavaScript</span>
+                <span>Modern CSS</span>
+                <span>API Integration</span>
+                <span>Web Apps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Software Developer - BSSVM School -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card-glass">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Software Developer</h3>
+                  <div class="company-name text-emerald"><i class="fa-solid fa-building"></i> BSSVM School</div>
+                </div>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Production Software Role</span>
+              </div>
+              <p class="timeline-desc">
+                Led end-to-end full-stack development and deployment of institutional systems using Next.js, TypeScript, Node.js, and PostgreSQL. Replaced legacy manual paper workflows with automated admissions, fee processing, and administrative tracking.
+              </p>
+              <div class="experience-skills">
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>PostgreSQL</span>
+                <span>REST APIs</span>
+                <span>Production Ops</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: TCS Data Visualization & Cybersecurity -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card-glass">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Data Visualization & Cybersecurity Intern</h3>
+                  <div class="company-name text-yellow"><i class="fa-solid fa-building"></i> Tata Consultancy Services (TCS)</div>
+                </div>
+                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> Industry Experience</span>
+              </div>
+              <p class="timeline-desc">
+                Built interactive data visualization dashboards, analyzed business KPI patterns, and explored cybersecurity fundamentals, network defense posture, and data protection strategies.
+              </p>
+              <div class="experience-skills">
+                <span>Data Visualization</span>
+                <span>Cybersecurity</span>
+                <span>KPI Dashboards</span>
+                <span>Information Security</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS SECTION -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic Foundations</span>
+          <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle">Consistent academic excellence backed by recognized credentials.</p>
+        </div>
+
+        <div class="edu-cert-grid">
+          <!-- Education Column -->
+          <div class="edu-column">
+            <h3 class="column-title"><i class="fa-solid fa-building-columns text-cyan"></i> Formal Education</h3>
+
+            <div class="edu-card card-glass">
+              <div class="edu-badge">Expected 2027</div>
+              <h4>B.Tech in Computer Science & Engineering</h4>
+              <p class="edu-inst">Murshidabad College of Engineering & Technology (MAKAUT)</p>
+              <div class="cgpa-pill">
+                <span class="score-label">Ongoing CGPA:</span>
+                <span class="score-val">7.6 / 10.0</span>
+              </div>
+              <p class="edu-note">Focused on Distributed Systems, DBMS, Machine Learning, Data Structures & Algorithms, and Software Engineering.</p>
+            </div>
+
+            <div class="edu-card card-glass">
+              <div class="edu-badge">Secondary Board</div>
+              <h4>Secondary Education (Madhyamik)</h4>
+              <p class="edu-inst">West Bengal Board of Secondary Education</p>
+              <div class="cgpa-pill high-score">
+                <span class="score-label">Score:</span>
+                <span class="score-val">93.0% (Outstanding Distinction)</span>
+              </div>
+            </div>
+
+            <div class="edu-card card-glass">
+              <div class="edu-badge">Higher Secondary</div>
+              <h4>Higher Secondary Education (Class XII Science)</h4>
+              <p class="edu-inst">West Bengal Council of Higher Secondary Education</p>
+              <div class="cgpa-pill">
+                <span class="score-label">Score:</span>
+                <span class="score-val">67.0%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications Column -->
+          <div class="cert-column">
+            <h3 class="column-title"><i class="fa-solid fa-certificate text-purple"></i> Industry Certifications</h3>
+
+            <div class="cert-card card-glass">
+              <div class="cert-icon-box bg-purple-glow">
+                <i class="fa-solid fa-microchip text-purple"></i>
+              </div>
+              <div class="cert-info">
+                <h4>Data Science</h4>
+                <p class="cert-issuer">EDC IIT Delhi</p>
+                <span class="cert-tag">IIT Delhi Certified</span>
+              </div>
+            </div>
+
+            <div class="cert-card card-glass">
+              <div class="cert-icon-box bg-cyan-glow">
+                <i class="fa-solid fa-cloud text-cyan"></i>
+              </div>
+              <div class="cert-info">
+                <h4>AI & Cloud Internship Credential</h4>
+                <p class="cert-issuer">IBM SkillBuild</p>
+                <span class="cert-tag">IBM SkillBuild</span>
+              </div>
+            </div>
+
+            <div class="cert-card card-glass">
+              <div class="cert-icon-box bg-emerald-glow">
+                <i class="fa-solid fa-code text-emerald"></i>
+              </div>
+              <div class="cert-info">
+                <h4>Full Stack Web Development</h4>
+                <p class="cert-issuer">Apna College</p>
+                <span class="cert-tag">Production Full-Stack</span>
+              </div>
+            </div>
+
+            <div class="cert-card card-glass">
+              <div class="cert-icon-box bg-yellow-glow">
+                <i class="fa-solid fa-laptop-code text-yellow"></i>
+              </div>
+              <div class="cert-info">
+                <h4>Frontend Development</h4>
+                <p class="cert-issuer">Edunet Foundation</p>
+                <span class="cert-tag">Edunet / IBM</span>
+              </div>
+            </div>
+
+            <div class="cert-card card-glass">
+              <div class="cert-icon-box bg-purple-glow">
+                <i class="fa-brands fa-python text-purple"></i>
+              </div>
+              <div class="cert-info">
+                <h4>Advanced Python Programming</h4>
+                <p class="cert-issuer">Udemy</p>
+                <span class="cert-tag">Python Mastery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY STRENGTHS & VALUE PROPOSITION FOR HR -->
+    <section class="section strengths-section">
+      <div class="container">
+        <div class="card-glass strengths-banner">
+          <div class="strengths-header">
+            <h3><i class="fa-solid fa-chess-knight text-yellow"></i> Why Sanchita is a High-Impact Engineering Hire</h3>
+            <p>Combining rigorous technical skills, operational empathy, and relentless execution.</p>
+          </div>
+          <div class="strengths-grid">
+            <div class="strength-item">
+              <i class="fa-solid fa-gears text-cyan"></i>
+              <h4>End-to-End Ownership</h4>
+              <p>From whiteboard schema design to PostgreSQL triggers, Redis queuing, and live production deployment on Hostinger.</p>
+            </div>
+            <div class="strength-item">
+              <i class="fa-solid fa-chart-simple text-purple"></i>
+              <h4>Data & Business Intuition</h4>
+              <p>Understands not just <em>how</em> to write code, but <em>why</em>: optimizing school fees, preventing employee churn, and accelerating workflows.</p>
+            </div>
+            <div class="strength-item">
+              <i class="fa-solid fa-language text-emerald"></i>
+              <h4>Trilingual Communication</h4>
+              <p>Comfortable presenting and collaborating in <strong>English, Hindi, and Bengali</strong> across engineering and non-technical stakeholders.</p>
+            </div>
+            <div class="strength-item">
+              <i class="fa-solid fa-arrows-spin text-yellow"></i>
+              <h4>High Adaptability & Grit</h4>
+              <p>Quick to adopt evolving stacks (React 19, Next.js 16, BullMQ, IoT SDKs) and thrive in fast-paced collaborative environments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-handshake"></i> Let's Connect</span>
+          <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Interested in discussing an internship, full-time role, or project collaboration? I respond within 24 hours.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Channels -->
+          <div class="contact-info-panel card-glass">
+            <div class="recruiter-pill-highlight">
+              <i class="fa-solid fa-sparkles text-yellow"></i>
+              <span>Recruiter Direct Line</span>
+            </div>
+            <h3>Let's build something exceptional together</h3>
+            <p>I am open to software engineering internships, graduate engineering roles, and AI/ML project opportunities across India and globally (remote).</p>
+
+            <div class="contact-links-list">
+              <div class="contact-method-card copy-trigger" data-copy="sanchitamalakar873@gmail.com">
+                <div class="method-icon bg-purple-glow"><i class="fa-regular fa-envelope text-purple"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Direct Email</span>
+                  <span class="method-value">sanchitamalakar873@gmail.com</span>
+                </div>
+                <button class="btn-icon" title="Copy Email"><i class="fa-regular fa-copy"></i></button>
+              </div>
+
+              <div class="contact-method-card copy-trigger" data-copy="+918918592391">
+                <div class="method-icon bg-cyan-glow"><i class="fa-solid fa-phone text-cyan"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Phone / WhatsApp</span>
+                  <span class="method-value">+91 8918592391</span>
+                </div>
+                <button class="btn-icon" title="Copy Phone"><i class="fa-regular fa-copy"></i></button>
+              </div>
+
+              <a href="https://linkedin.com/in/sanchita-malakar938a55321" target="_blank" rel="noopener" class="contact-method-card link-card">
+                <div class="method-icon bg-blue-glow"><i class="fa-brands fa-linkedin text-cyan"></i></div>
+                <div class="method-details">
+                  <span class="method-label">LinkedIn Profile</span>
+                  <span class="method-value">linkedin.com/in/sanchita-malakar938a55321</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+              <a href="https://github.com/Sanchita-Malakar" target="_blank" rel="noopener" class="contact-method-card link-card">
+                <div class="method-icon bg-emerald-glow"><i class="fa-brands fa-github text-emerald"></i></div>
+                <div class="method-details">
+                  <span class="method-label">GitHub Profile</span>
+                  <span class="method-value">github.com/Sanchita-Malakar</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+              <div class="contact-method-card location-card">
+                <div class="method-icon"><i class="fa-solid fa-map-location-dot text-yellow"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Location</span>
+                  <span class="method-value">Bharatpur, Murshidabad, West Bengal, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div class="contact-form-panel card-glass">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-subtitle">Fill in the details below to dispatch an inquiry directly.</p>
+            
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Your Name / Organization <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-user"></i>
+                  <input type="text" id="contact-name" placeholder="e.g. Sarah Jenkins (Tech Talent Recruiter)" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email Address <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <i class="fa-regular fa-envelope"></i>
+                  <input type="email" id="contact-email" placeholder="sarah@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-role">Opportunity Type</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-briefcase"></i>
+                  <select id="contact-role">
+                    <option value="SDE Role">Full-Time Software Engineer Role</option>
+                    <option value="Internship" selected>Software / AI Internship</option>
+                    <option value="Consulting/Project">Project / Freelance Collaboration</option>
+                    <option value="General">General Inquiry / Networking</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message <span class="req">*</span></label>
+                <div class="input-wrap textarea-wrap">
+                  <textarea id="contact-message" rows="4" placeholder="Hello Sanchita, we reviewed your work on CampusCore & EmpIQ and would love to connect..." required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-primary w-100 btn-lg" id="contact-submit-btn">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="brand-logo">&lt;SM /&gt; Sanchita Malakar</div>
+        <p>Full-Stack & AI/ML Software Engineer • MAKAUT '27</p>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Back to Top</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-right">
+        <p>© 2026 Sanchita Malakar. All rights reserved.</p>
+        <p class="footer-subtext">Built with Three.js, Modern CSS & Passion for Engineering.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING HR QUICK-DOCK (Bottom Right on Desktop) -->
+  <div class="floating-hr-dock">
+    <button class="dock-btn recruiter-dock" id="dock-recruiter-btn" title="Open Recruiter Fast-Track (60s Summary)">
+      <span class="dock-pulse"></span>
+      <i class="fa-solid fa-bolt"></i>
+      <span class="dock-label">Recruiter Fast-Track</span>
+    </button>
+    <button class="dock-btn resume-dock" id="dock-resume-btn" title="Download ATS Resume">
+      <i class="fa-solid fa-file-pdf"></i>
+      <span class="dock-label">ATS Resume</span>
+    </button>
+  </div>
+
+  <!-- RECRUITER FAST-TRACK MODAL -->
+  <div class="modal-overlay" id="recruiter-modal">
+    <div class="modal-card card-glass">
+      <div class="modal-header">
+        <div class="modal-header-title">
+          <span class="badge-recruiter"><i class="fa-solid fa-bolt"></i> 60-Second Recruiter Summary</span>
+          <h3>Sanchita Malakar</h3>
+          <p class="modal-subtitle">Full-Stack & AI/ML Software Engineer | B.Tech CSE @ MAKAUT (2027)</p>
+        </div>
+        <button class="btn-icon modal-close-btn" id="close-recruiter-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Quick Contact Actions -->
+        <div class="recruiter-quick-actions">
+          <button class="quick-action-btn copy-trigger" data-copy="sanchitamalakar873@gmail.com">
+            <i class="fa-regular fa-envelope text-purple"></i>
+            <span>Copy Email</span>
+          </button>
+          <button class="quick-action-btn copy-trigger" data-copy="+918918592391">
+            <i class="fa-solid fa-phone text-cyan"></i>
+            <span>Copy Phone</span>
+          </button>
+          <a href="https://linkedin.com/in/sanchita-malakar938a55321" target="_blank" rel="noopener" class="quick-action-btn">
+            <i class="fa-brands fa-linkedin text-blue"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/Sanchita-Malakar" target="_blank" rel="noopener" class="quick-action-btn">
+            <i class="fa-brands fa-github text-white"></i>
+            <span>GitHub</span>
+          </a>
+          <button class="quick-action-btn print-resume-action" id="modal-print-resume">
+            <i class="fa-solid fa-print text-yellow"></i>
+            <span>Print Resume</span>
+          </button>
+        </div>
+
+        <!-- 4 Bullet Pitch -->
+        <div class="recruiter-section-box">
+          <h4><i class="fa-solid fa-check-double text-emerald"></i> Why Hire Sanchita in 60 Seconds:</h4>
+          <ul class="recruiter-pitch-list">
+            <li><strong>Production Track Record:</strong> Architected & deployed live production platforms (BSSVM Admissions & CampusCore ERP) powering 500+ active students, 35+ faculty, and 28 REST APIs.</li>
+            <li><strong>Distributed Backend Depth:</strong> Built asynchronous BullMQ + Redis queuing handling 15,000+ monthly notifications with rate-limiting, and synchronized IoT biometric attendance over TCP-IP.</li>
+            <li><strong>Explainable AI & ML:</strong> Created EmpIQ HR workforce intelligence with XGBoost, Random Forest, and SHAP TreeExplainer for transparent flight-risk and promotion analysis.</li>
+            <li><strong>Academic Rigor & Consistency:</strong> 93% in Secondary Education, 7.6 ongoing CGPA in B.Tech CSE, trilingual communicator (English, Hindi, Bengali).</li>
+          </ul>
+        </div>
+
+        <!-- ATS Keywords Checklist -->
+        <div class="recruiter-section-box">
+          <h4><i class="fa-solid fa-tags text-cyan"></i> Core ATS Keywords & Competencies:</h4>
+          <div class="ats-tags-cloud">
+            <span class="ats-tag">TypeScript</span>
+            <span class="ats-tag">Python</span>
+            <span class="ats-tag">Next.js 16</span>
+            <span class="ats-tag">React 19</span>
+            <span class="ats-tag">Node.js</span>
+            <span class="ats-tag">PostgreSQL</span>
+            <span class="ats-tag">Supabase RLS</span>
+            <span class="ats-tag">Redis & BullMQ</span>
+            <span class="ats-tag">Docker</span>
+            <span class="ats-tag">Scikit-learn</span>
+            <span class="ats-tag">XGBoost</span>
+            <span class="ats-tag">SHAP (XAI)</span>
+            <span class="ats-tag">Streamlit</span>
+            <span class="ats-tag">REST APIs</span>
+            <span class="ats-tag">ACID Transactions</span>
+            <span class="ats-tag">C++ DSA</span>
+          </div>
+        </div>
+
+        <!-- Role Availability & Logistics -->
+        <div class="recruiter-meta-grid">
+          <div class="meta-item">
+            <span class="meta-label">Availability</span>
+            <span class="meta-value text-emerald"><i class="fa-solid fa-circle-check"></i> Immediate (Internship & Full-time)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Location / Relocation</span>
+            <span class="meta-value">Murshidabad / Kolkata / Open to Relocate & Remote</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Degree & Year</span>
+            <span class="meta-value">B.Tech CSE (Expected 2027)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Languages</span>
+            <span class="meta-value">Fluent English, Hindi, Bengali</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-primary w-100" id="recruiter-contact-forward">
+          <i class="fa-regular fa-envelope"></i>
+          <span>Schedule an Interview / Send Message</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DEEP-DIVE MODAL -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-card card-glass modal-lg">
+      <div class="modal-header">
+        <div class="modal-header-title" id="project-modal-header">
+          <h3 id="proj-modal-title">Project Architecture Overview</h3>
+          <p class="modal-subtitle" id="proj-modal-subtitle">Technical deep-dive & impact</p>
+        </div>
+        <button class="btn-icon modal-close-btn" id="close-project-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" id="project-modal-body">
+        <!-- Dynamic content injected by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUME PRINT CONTAINER (Formatted specifically for @media print) -->
+  <div class="print-only-resume">
+    <header class="print-header">
+      <h1>SANCHITA MALAKAR</h1>
+      <p>Bharatpur, Murshidabad, West Bengal, India | +91 8918592391 | sanchitamalakar873@gmail.com</p>
+      <p>LinkedIn: linkedin.com/in/sanchita-malakar938a55321 | GitHub: github.com/Sanchita-Malakar</p>
+    </header>
+
+    <section class="print-section">
+      <h2>SUMMARY</h2>
+      <p>Computer Science Engineering student with hands-on experience building and deploying production full-stack applications using TypeScript, Python, Node.js, React, PostgreSQL, and REST APIs. Experienced in software development, business process automation, secure backend systems, and AI/ML integration through real-world applications.</p>
+    </section>
+
+    <section class="print-section">
+      <h2>TECHNICAL SKILLS</h2>
+      <p><strong>Languages:</strong> Python, C++, TypeScript, JavaScript, SQL</p>
+      <p><strong>Software Engineering:</strong> Next.js, React, Node.js, REST APIs, PostgreSQL</p>
+      <p><strong>AI/ML:</strong> PyTorch, Scikit-learn, XGBoost, RAG, SHAP</p>
+      <p><strong>Cloud & Tools:</strong> Supabase, Redis, BullMQ, Docker, Git, GitHub, Streamlit, Plotly</p>
+    </section>
+
+    <section class="print-section">
+      <h2>EXPERIENCE</h2>
+      <div class="print-exp-item">
+        <strong>AI & Cloud Development Intern (AICTE) — IBM Cloud</strong>
+        <p>Built AI/ML and RAG applications using Python and IBM Watsonx.</p>
+      </div>
+      <div class="print-exp-item">
+        <strong>Frontend Development Intern — IBM / Edunet</strong>
+        <p>Developed and deployed web applications and AI-enabled projects using HTML, CSS, JavaScript, and APIs.</p>
+      </div>
+      <div class="print-exp-item">
+        <strong>Software Developer — BSSVM School</strong>
+        <p>Built production full-stack school applications using Next.js, TypeScript, Node.js, PostgreSQL, and REST APIs.</p>
+      </div>
+      <div class="print-exp-item">
+        <strong>Data Visualization & Cybersecurity — TCS</strong>
+        <p>Built data visualization dashboards and explored cybersecurity fundamentals.</p>
+      </div>
+    </section>
+
+    <section class="print-section">
+      <h2>PROJECTS</h2>
+      <div class="print-proj-item">
+        <strong>BSSVM Web Portal & Digital Admissions Platform</strong> | Next.js 16, React 19, TypeScript, Node.js, PostgreSQL, Supabase, REST APIs, Hostinger
+        <ul>
+          <li>Architected and deployed a production full-stack institutional platform used by a private school, digitizing admissions, application tracking, fee calculation, document submission, multilingual content, and administrative workflows.</li>
+          <li>Engineered 28 RESTful API endpoints and 17 PostgreSQL tables supporting multi-step admissions, OTP authentication, application tracking, CMS operations, document processing, and automated class-specific fee calculations.</li>
+          <li>Implemented secure role-based architecture with PostgreSQL RLS, separating public content, parent application data, administrative operations, and confidential admission documents using private Supabase Storage.</li>
+          <li>Built an administrative audit and recovery system using PostgreSQL triggers and historical state tracking, enabling administrators to inspect changes and restore modified or deleted records.</li>
+          <li>Integrated data visualization and ML-driven functionality for administrative insights, and deployed the application with production authentication, 2FA, rate limiting, bilingual English–Bengali localization, SEO, caching, and CI/CD.</li>
+        </ul>
+      </div>
+
+      <div class="print-proj-item">
+        <strong>BSSVM CampusCore — School Operations & ERP Platform</strong> | TypeScript, Node.js, Next.js, PostgreSQL, Redis, BullMQ, WhatsApp Business API, Docker
+        <ul>
+          <li>Architected and deployed a production school operations platform managing 500+ students and 35+ faculty/staff, digitizing fee collection, attendance, payroll, academic records, parent communication, and financial reporting.</li>
+          <li>Engineered a 24-table PostgreSQL data model and backend services for financial ledgers, payroll, attendance, academics, and transactions, implementing ACID transactions, indexing, foreign-key relationships, and RBAC across 4 user roles.</li>
+          <li>Built an asynchronous notification pipeline using Node.js, Redis, BullMQ, and Meta WhatsApp Business API, automating 15,000+ monthly notifications with retry and rate-limiting mechanisms.</li>
+          <li>Integrated biometric attendance hardware with a Node.js service, synchronizing staff attendance through vendor SDK/TCP-IP interfaces and automatically feeding attendance data into leave, late-arrival, and payroll calculations.</li>
+          <li>Developed ML/data-driven analytics and visualization workflows for institutional and financial insights, alongside automated grading and bulk generation of 500+ individualized PDF report cards in under 30 seconds.</li>
+        </ul>
+      </div>
+
+      <div class="print-proj-item">
+        <strong>EmpIQ — AI-Powered HR Analytics & Workforce Intelligence Platform</strong> | Python, Scikit-learn, XGBoost, Pandas, Streamlit, Plotly, SHAP
+        <ul>
+          <li>Developed a multi-class ML classification system predicting employee performance across High, Medium, and Low tiers using Random Forest and XGBoost models with stratified cross-validation and Macro/Weighted F1, ROC-AUC, and confusion-matrix evaluation.</li>
+          <li>Engineered domain-specific features and preprocessing pipelines including engagement_score, salary_per_exp, career_momentum, train_per_proj, and overwork_flag, with imputation, one-hot encoding, correlation-based selection, and StandardScaler normalization.</li>
+          <li>Implemented explainable AI using SHAP TreeExplainer and feature-importance analysis, enabling interpretation of individual predictions and identification of factors influencing workforce performance.</li>
+          <li>Built a production-style interactive Streamlit dashboard with 1,000+ lines of application code, integrating Plotly radar charts, heatmaps, box/violin plots, gauges, batch workforce analytics, real-time inference, and CSV exports.</li>
+          <li>Translated model predictions into actionable HR workflows, including flight-risk identification, promotion prioritization, compensation analysis, and targeted employee upskilling recommendations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="print-section">
+      <h2>EDUCATION</h2>
+      <p><strong>B.Tech in Computer Science & Engineering</strong> — Murshidabad College of Engineering & Technology, MAKAUT (Expected 2027) | CGPA: 7.6/10 (Ongoing)</p>
+      <p><strong>Higher Secondary (Science)</strong> — West Bengal Council of Higher Secondary Education | 67%</p>
+      <p><strong>Secondary Education</strong> — West Bengal Board of Secondary Education | 93%</p>
+    </section>
+
+    <section class="print-section">
+      <h2>CERTIFICATIONS</h2>
+      <p>Data Science — EDC IIT Delhi | AI & Cloud Internship — IBM SkillBuild | Full Stack Web Development — Apna College | Frontend Development — Edunet Foundation | Advanced Python — Udemy</p>
+    </section>
+
+    <section class="print-section">
+      <h2>KEY STRENGTHS</h2>
+      <p>Problem Solving & Analytical Thinking | Software Development & Debugging | Business Process Understanding | Project & Task Management | Team Collaboration & Leadership | Clear Technical Communication | Fluent English, Hindi & Bengali | Adaptability</p>
+    </section>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
