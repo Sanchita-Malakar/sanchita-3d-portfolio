@@ -3,6 +3,9 @@
 > **Full-Stack Software Engineer & AI/ML Developer**  
 > Computer Science & Engineering @ Murshidabad College of Engineering & Technology (MAKAUT) • Expected 2027
 
+🔗 **Live Website (Vercel)**: [https://portfolio-theta-two-6esgmduadt.vercel.app](https://portfolio-theta-two-6esgmduadt.vercel.app)  
+🔗 **Live Website (GitHub Pages)**: [https://sanchita-malakar.github.io/sanchita-3d-portfolio/](https://sanchita-malakar.github.io/sanchita-3d-portfolio/)
+
 An interactive, high-performance portfolio engineered with **Three.js 3D animations**, dynamic card parallax, a **Recruiter Fast-Track (60s Summary)** mode, and an **ATS-optimized print stylesheet** for hiring managers.
 
 ---
